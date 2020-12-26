@@ -1,0 +1,59 @@
+/** @format */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #060c21;
+	min-height: 100vh;
+}
+
+.box {
+	position: relative;
+	width: 300px;
+	height: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #060c21;
+}
+
+.box::before {
+	content: "";
+	position: absolute;
+	top: -3px;
+	left: -3px;
+	right: -3px;
+	bottom: -3px;
+	z-index: -1;
+}
+
+.box::after {
+	content: "";
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: #fff;
+	z-index: -2;
+	filter: blur(40px);
+}
+
+.box::before,
+.box::after {
+	background: linear-gradient(235deg, #89ff00, #060c21, #00bcd4);
+}
+
+.content {
+	padding: 20px;
+	color: gainsboro;
+}
