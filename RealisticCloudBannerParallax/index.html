@@ -1,0 +1,47 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="banner">
+			<h2 id="text">Heaven</h2>
+			<div class="clouds">
+				<img src="cloud1.png" alt="" style="--i: 1" />
+				<img src="cloud2.png" alt="" style="--i: 2" />
+				<img src="cloud3.png" alt="" style="--i: 3" />
+				<img src="cloud4.png" alt="" style="--i: 4" />
+				<img src="cloud5.png" alt="" style="--i: 5" />
+				<img src="cloud1.png" alt="" style="--i: 6" />
+				<img src="cloud2.png" alt="" style="--i: 7" />
+				<img src="cloud3.png" alt="" style="--i: 8" />
+				<img src="cloud4.png" alt="" style="--i: 9" />
+				<img src="cloud5.png" alt="" style="--i: 10" />
+			</div>
+		</div>
+		<section>
+			<h2>RealisticCloudBannerParallax</h2>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta
+				debitis, vel qui assumenda quos neque minus? Similique praesentium sequi
+				nihil? Sapiente, repellendus fugiat id quaerat tenetur libero dolorem
+				earum.Necessitatibus numquam reiciendis beatae aliquid iste accusantium
+				natus exercitationem commodi esse consequatur quo, dolores mollitia.
+				Eligendi vero nemo blanditiis! Tempora quaerat cumque quos quia? Vel
+				corrupti ut quaerat perferendis quibusdam.
+			</p>
+		</section>
+		<script>
+			let text = document.getElementById("text");
+			window.addEventListener("scroll", () => {
+				let value = window.scrollY;
+				text.style.marginBottom = value * 2 + "px";
+			});
+		</script>
+	</body>
+</html>
