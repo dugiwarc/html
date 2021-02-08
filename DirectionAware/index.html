@@ -1,0 +1,89 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DirectionAware</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="card">
+				<span></span>
+				<div class="imgBx">
+					<img src="../3DImageGallery/img1.jpeg" alt="" />
+				</div>
+				<div class="content">
+					<div>
+						<h2>Card Title</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+							sapiente distinctio dicta! Non soluta nostrum eaque ullam velit
+							sequi dolorem itaque sed eius architecto mollitia, libero
+							reiciendis nobis quae ut?
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="card">
+				<span></span>
+				<div class="imgBx">
+					<img src="../3DImageGallery/img2.jpeg" alt="" />
+				</div>
+				<div class="content">
+					<div>
+						<h2>Card Title</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+							sapiente distinctio dicta! Non soluta nostrum eaque ullam velit
+							sequi dolorem itaque sed eius architecto mollitia, libero
+							reiciendis nobis quae ut?
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="card">
+				<span></span>
+				<div class="imgBx">
+					<img src="../3DImageGallery/img3.jpeg" alt="" />
+				</div>
+				<div class="content">
+					<div>
+						<h2>Card Title</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+							sapiente distinctio dicta! Non soluta nostrum eaque ullam velit
+							sequi dolorem itaque sed eius architecto mollitia, libero
+							reiciendis nobis quae ut?
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.min.js"
+			integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+			crossorigin="anonymous"
+		></script>
+		<script>
+			$(document).ready(function () {
+				$(".card").on("mouseenter", function (evt) {
+					(x = evt.pageX - $(this).offset().left),
+						(y = evt.pageY - $(this).offset().top);
+					$(this).find("span").css({ top: y, left: x });
+				});
+				$(".card").on("mouseout", function (evt) {
+					(x = evt.pageX - $(this).offset().left),
+						(y = evt.pageY - $(this).offset().top);
+					$(this).find("span").css({ top: y, left: x });
+				});
+			});
+		</script>
+	</body>
+</html>
