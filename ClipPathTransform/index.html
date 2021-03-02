@@ -1,0 +1,56 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h3>Scroll Down</h3>
+		<h2 class="text">Scroll to see Magic 4</h2>
+
+		<section>
+			<h2 class="innerText">Scroll to see Magic 4</h2>
+		</section>
+		<div class="container">
+			<h2>Lorem ipsum dolor sit amet</h2>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eius
+				dicta ullam eos quos, architecto quis amet quia? Quasi vitae aliquid
+				recusandae assumenda distinctio accusamus eos at soluta nam quae! Lorem
+				ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam natus,
+				laboriosam dolorem magnam qui dolores, accusamus eos mollitia quidem,
+				maiores culpa iure. Culpa rem adipisci illo pariatur eius recusandae et?
+				<br />
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eius
+				dicta ullam eos quos, architecto quis amet quia? Quasi vitae aliquid
+				recusandae assumenda distinctio accusamus eos at soluta nam quae! Lorem
+				ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam natus,
+				laboriosam dolorem magnam qui dolores, accusamus eos mollitia quidem,
+				maiores culpa iure. Culpa rem adipisci illo pariatur eius recusandae et?
+				<br />
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eius
+				dicta ullam eos quos, architecto quis amet quia? Quasi vitae aliquid
+				recusandae assumenda distinctio accusamus eos at soluta nam quae! Lorem
+				ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam natus,
+				laboriosam dolorem magnam qui dolores, accusamus eos mollitia quidem,
+				maiores culpa iure. Culpa rem adipisci illo pariatur eius recusandae et?
+			</p>
+		</div>
+
+		<script>
+			let section = document.querySelector("section");
+			window.addEventListener("scroll", function () {
+				let value = window.scrollY;
+				let text = document.querySelector(".text");
+				let innerText = document.querySelector(".innerText");
+
+				section.style.clipPath = `circle(${value}px at center center)`;
+				text.style.left = innerText.style.left = 100 - value / 10 + "%";
+			});
+		</script>
+	</body>
+</html>
