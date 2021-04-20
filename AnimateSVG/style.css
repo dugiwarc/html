@@ -1,0 +1,43 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: black;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container path {
+	fill: transparent;
+	stroke-width: 1;
+	stroke: gray;
+	stroke-dasharray: 1;
+}
+
+.container svg path:hover {
+	animation: svgAnimate 5s;
+}
+
+@keyframes svgAnimate {
+	0% {
+		stroke-dasharray: 1;
+	}
+	60% {
+		stroke-dasharray: 2;
+	}
+	99% {
+		stroke-dasharray: 1;
+	}
+}

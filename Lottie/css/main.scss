@@ -1,0 +1,58 @@
+body {
+	background-color: rgb(27, 27, 27);
+	margin: 0;
+	display: grid;
+	place-content: center;
+	height: 100vh;
+	font-family: "Poppins";
+	color: white;
+}
+
+.container {
+	position: relative;
+	width: 60%;
+	margin: 0 auto;
+	background-color: rgb(23, 23, 23);
+	padding: 2em;
+
+	h1 {
+		margin: 0;
+	}
+
+	p {
+		color: gray;
+	}
+}
+
+button {
+	background-color: rgb(34, 34, 34);
+	margin-top: 2em;
+	border: none;
+	padding: 1em;
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	outline: 0;
+	cursor: pointer;
+
+	&:hover {
+		background-color: rgb(42, 42, 42);
+	}
+
+	&:active {
+		background-color: orange;
+	}
+}
+
+.svg {
+	width: 200px;
+	position: absolute;
+	top: -40px;
+	left: -30px;
+	pointer-events: none;
+}
+
+.hide {
+	// display: none;
+}

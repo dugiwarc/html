@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="svg hide" id="svg"></div>
+        <h1>My card title</h1> 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit sint, eius voluptas ipsa molestiae quisquam?</p>   
+        <button>Get started</button>
+    </div>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js" integrity="sha512-w58XJ/0dVbEfZVJoJyBUOTMGBWmIW4jEYJSA0898d2L0Ghpum0FvwK7qTuHhkTctApzrchv3Neli+28ajI4+fg==" crossorigin="anonymous"></script>
+    <script>
+        const playButton = document.querySelector('button');
+        const svgContainer = document.querySelector('#svg');
+
+        const animItem = bodymovin.loadAnimation({
+            wrapper: svgContainer,
+            animType: 'svg',
+            loop: false,
+            background:'transparent',
+            autoplay: false,
+            path: './conf_2.json'
+        })
+
+        playButton.addEventListener('click', () => {
+            animItem.goToAndPlay(0, true)
+        })
+
+    </script>
+</body>
+</html>
